@@ -115,7 +115,7 @@ M.highlights_base = function(colors)
     -- TSCharacter         = { };    -- For characters.
     -- TSComment           = { };    -- For color1 blocks.
     TSNote = { guifg = colors.background, guibg = colors.color5 },
-    TSComment = { guifg = colors.color8, cterm = { "bold" } },
+    TSComment = { guifg = colors.color8 },
     TSWarning = { guifg = colors.background, guibg = colors.color5 },
     TSDanger = { guifg = colors.background, guibg = colors.color3 },
     TSConstructor = { guifg = colors.color6 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
