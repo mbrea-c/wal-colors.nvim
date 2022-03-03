@@ -1,6 +1,6 @@
 local M = {}
 
-M.highlights_base = function (colors)
+M.highlights_base = function(colors)
   return {
     Normal = { guifg = colors.foreground, guibg = colors.background },
     StatusLineNC = { guibg = colors.background, guifg = colors.background },
@@ -115,7 +115,7 @@ M.highlights_base = function (colors)
     -- TSCharacter         = { };    -- For characters.
     -- TSComment           = { };    -- For color1 blocks.
     TSNote = { guifg = colors.background, guibg = colors.color5 },
-    TSComment = { guifg = colors.color1 },
+    TSComment = { guifg = colors.color8, cterm = { "bold" } },
     TSWarning = { guifg = colors.background, guibg = colors.color5 },
     TSDanger = { guifg = colors.background, guibg = colors.color3 },
     TSConstructor = { guifg = colors.color6 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
@@ -158,6 +158,7 @@ M.highlights_base = function (colors)
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
     TSTextReference = { guifg = colors.color8 },
+    TSMath = { guifg = colors.color1 }, -- For latex math
     -- TSEmphasis          = { };    -- For text to be represented with emphasis.
     -- TSUnderline         = { };    -- For text to be represented with an underline.
     -- TSStrike            = { };    -- For strikethrough text.
@@ -184,7 +185,7 @@ M.highlights_base = function (colors)
     diffLine = { guifg = colors.color1 },
     diffIndexLine = { guifg = colors.color6 },
 
-   -- Neogit
+    -- Neogit
     NeogitBranch = { guifg = colors.color6 },
     NeogitRemote = { guifg = colors.color6 },
     NeogitHunkHeader = { guibg = colors.background, guifg = colors.foreground },
