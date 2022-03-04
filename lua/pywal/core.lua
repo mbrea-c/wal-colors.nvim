@@ -2,7 +2,7 @@ local M = {}
 
 local function parse_rgb(s)
   print(s)
-  assert(s[1] == "#")
+  assert(s:sub(1, 1) == "#")
   local r = tonumber(s:sub(2, 3), 16)
   local g = tonumber(s:sub(4, 5), 16)
   local b = tonumber(s:sub(6, 7), 16)
