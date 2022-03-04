@@ -94,11 +94,13 @@ function M.get_colors()
     color15 = vim.g.color15,
   }
 
-  colors.shades = {}
+  local shades = {}
 
   for k, v in pairs(colors) do
-    colors.shades[k] = { light = lighten(v, 0.8), normal = v, dark = darken(v, 0.8) }
+    shades[k] = { light = lighten(v, 0.8), normal = v, dark = darken(v, 0.8) }
   end
+
+  colors.shades = shades
 
   return colors
 end
