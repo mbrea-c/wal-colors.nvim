@@ -93,6 +93,7 @@ function M.get_colors()
 
   for k, v in pairs(colors) do
     shades[k] = { light = lighten(v, 0.8), normal = v, dark = darken(v, 0.8) }
+    print(vim.inspect(shades))
   end
 
   colors.shades = shades
