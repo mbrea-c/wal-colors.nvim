@@ -131,8 +131,8 @@ M.highlights_base = function(colors)
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { guifg = colors.color6 }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { guifg = colors.color6 }, -- For keywords used to define a fuction.
+    TSKeyword = { guifg = colors.color2, cterm = "bold" }, -- For keywords that don't fall in previous categories.
+    TSKeywordFunction = { guifg = colors.shades.color2.dark, cterm = "bold" }, -- For keywords used to define a fuction.
     TSLabel = { guifg = colors.color7 }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.

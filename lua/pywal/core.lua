@@ -1,7 +1,6 @@
 local M = {}
 
 local function parse_rgb(s)
-  print("Parsing: ", s)
   assert(s:sub(1, 1) == "#")
   local r = tonumber(s:sub(2, 3), 16)
   local g = tonumber(s:sub(4, 5), 16)
@@ -58,14 +57,10 @@ local function darken(v, ratio)
 end
 
 local function lighten(v, ratio)
-  print(v)
   local h, s, v = rgb_to_hsv(parse_rgb(v))
-  print(h, s, v)
   v = 255 - ratio * (255 - v)
-  print(h, s, v)
   local r, g, b = hsv_to_rgb(h, s, v)
   local light = string.format("#%2X%2X%2X", r, g, b)
-  print("Final: ", light)
   return light
 end
 
