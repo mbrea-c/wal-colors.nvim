@@ -1,17 +1,14 @@
 local M = {}
 
 local function parse_rgb(s)
-  print(s)
   assert(s:sub(1, 1) == "#")
   local r = tonumber(s:sub(2, 3), 16)
   local g = tonumber(s:sub(4, 5), 16)
   local b = tonumber(s:sub(6, 7), 16)
-  print(r, g, b)
   return r, g, b
 end
 
 local function rgb_to_hsv(r, g, b)
-  print(r, g, b)
   local K = 0
   if g < b then
     g, b = b, g
@@ -55,16 +52,19 @@ end
 
 local function darken(v, ratio)
   local h, s, v = rgb_to_hsv(parse_rgb(v))
-  print(h, s, v)
   local r, g, b = hsv_to_rgb(h, s, ratio * v)
   local light = string.format("#%2X%2X%2X", r, g, b)
 end
 
 local function lighten(v, ratio)
+  print(v)
   local h, s, v = rgb_to_hsv(parse_rgb(v))
   print(h, s, v)
-  local r, g, b = hsv_to_rgb(h, s, 100 - ratio * (100 - v))
+  local r, g, b = hsv_to_rgb(h, s, 255 - ratio * (255 - v))
+  print(r, g, b)
   local light = string.format("#%2X%2X%2X", r, g, b)
+  print("Final: " + light)
+  return light
 end
 
 function M.get_colors()
@@ -96,7 +96,6 @@ function M.get_colors()
 
   for k, v in pairs(colors) do
     colors.shades[k] = { light = lighten(v, 0.8), normal = v, dark = darken(v, 0.8) }
-    print(colors.shades[k])
   end
 
   return colors
