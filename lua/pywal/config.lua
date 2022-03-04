@@ -145,7 +145,7 @@ M.highlights_base = function(colors)
     TSPunctDelimiter = { guifg = colors.shades.color3.dark }, -- For delimiters ie: `.`
     TSPunctBracket = { guifg = colors.foreground }, -- For brackets and parens.
     TSPunctSpecial = { guifg = colors.color7 }, -- For special punctutation that does not fall in the catagories before.
-    -- TSRepeat            = { };    -- For keywords related to loops.
+    TSRepeat = { guifg = colors.color2 }, -- For keywords related to loops.
     TSString = { guifg = colors.color1 }, -- For strings.
     TSStringRegex = { guifg = colors.color7 }, -- For regexes.
     TSStringEscape = { guifg = colors.color6 }, -- For escape characters within a string.
