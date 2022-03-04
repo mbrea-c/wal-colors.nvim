@@ -119,7 +119,7 @@ M.highlights_base = function(colors)
     TSWarning = { guifg = colors.background, guibg = colors.color5 },
     TSDanger = { guifg = colors.background, guibg = colors.color3 },
     TSConstructor = { guifg = colors.color6 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    -- TSConditional       = { };    -- For keywords related to conditionnals.
+    TSConditional = { guifg = colors.color2 }, -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
@@ -127,7 +127,7 @@ M.highlights_base = function(colors)
     -- TSException         = { };    -- For exception related keywords.
     TSField = { guifg = colors.color12 }, -- For fields.
     -- TSFloat             = { };    -- For floats.
-    -- TSFunction          = { };    -- For function (calls and definitions).
+    TSFunction = { guifg = colors.color4, gui = "bold" }, -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
@@ -137,16 +137,16 @@ M.highlights_base = function(colors)
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
-    -- TSNumber            = { };    -- For all numbers
+    TSNumber = { guifg = colors.shades.color1.light }, -- For all numbers
     TSOperator = { guifg = colors.color7 }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter = { guifg = colors.color5 }, -- For parameters of a function.
+    TSParameter = { guifg = colors.color4 }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { guifg = colors.color4 }, -- Same as `TSField`.
     TSPunctDelimiter = { guifg = colors.shades.color3.dark }, -- For delimiters ie: `.`
     TSPunctBracket = { guifg = colors.foreground }, -- For brackets and parens.
     TSPunctSpecial = { guifg = colors.color7 }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
-    -- TSString            = { };    -- For strings.
+    TSString = { guifg = colors.color1 }, -- For strings.
     TSStringRegex = { guifg = colors.color7 }, -- For regexes.
     TSStringEscape = { guifg = colors.color6 }, -- For escape characters within a string.
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
