@@ -142,7 +142,7 @@ M.highlights_base = function(colors)
     TSParameter = { guifg = colors.color5 }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { guifg = colors.color4 }, -- Same as `TSField`.
-    TSPunctDelimiter = { guifg = colors.shades.color3.dark }, -- For delimiters ie: `.`
+    TSPunctDelimiter = { guifg = colors.color7 }, -- For delimiters ie: `.`
     TSPunctBracket = { guifg = colors.foreground }, -- For brackets and parens.
     TSPunctSpecial = { guifg = colors.color7 }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
