@@ -63,7 +63,7 @@ local function lighten(v, ratio)
   local r, g, b = hsv_to_rgb(h, s, 255 - ratio * (255 - v))
   print(r, g, b)
   local light = string.format("#%2X%2X%2X", r, g, b)
-  print("Final: " + light)
+  print("Final: ", light)
   return light
 end
 
