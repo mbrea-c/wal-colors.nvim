@@ -57,14 +57,14 @@ local function darken(v, ratio)
   local h, s, v = rgb_to_hsv(parse_rgb(v))
   print(h, s, v)
   local r, g, b = hsv_to_rgb(h, s, ratio * v)
-  local light = string.format("#%2hhX%2hhX%2hhX", r, g, b)
+  local light = string.format("#%2X%2X%2X", r, g, b)
 end
 
 local function lighten(v, ratio)
   local h, s, v = rgb_to_hsv(parse_rgb(v))
   print(h, s, v)
   local r, g, b = hsv_to_rgb(h, s, 100 - ratio * (100 - v))
-  local light = string.format("#%2hhX%2hhX%2hhX", r, g, b)
+  local light = string.format("#%2X%2X%2X", r, g, b)
 end
 
 function M.get_colors()
