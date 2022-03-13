@@ -132,7 +132,7 @@ M.highlights_base = function(colors)
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSKeyword = { guifg = colors.color2, gui = "bold" }, -- For keywords that don't fall in previous categories.
-    TSKeywordFunction = { guifg = colors.shades.color2.dark, gui = "bold" }, -- For keywords used to define a fuction.
+    TSKeywordFunction = { guifg = colors.shades.color2.darker, gui = "bold" }, -- For keywords used to define a fuction.
     TSLabel = { guifg = colors.color7 }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
@@ -142,7 +142,7 @@ M.highlights_base = function(colors)
     TSParameter = { guifg = colors.color4 }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { guifg = colors.color4 }, -- Same as `TSField`.
-    TSPunctDelimiter = { guifg = colors.shades.color3.dark }, -- For delimiters ie: `.`
+    TSPunctDelimiter = { guifg = colors.shades.color3.darker }, -- For delimiters ie: `.`
     TSPunctBracket = { guifg = colors.foreground }, -- For brackets and parens.
     TSPunctSpecial = { guifg = colors.color7 }, -- For special punctutation that does not fall in the catagories before.
     TSRepeat = { guifg = colors.color2 }, -- For keywords related to loops.

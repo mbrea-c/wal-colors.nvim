@@ -51,6 +51,7 @@ local function hsv_to_rgb(h, s, v)
 end
 
 local function darken(v, ratio)
+  ratio = 1 - ratio
   local h, s, v = rgb_to_hsv(parse_rgb(v))
   local r, g, b = hsv_to_rgb(h, s, ratio * v)
   local dark = string.format("#%2X%2X%2X", r, g, b)
@@ -58,6 +59,7 @@ local function darken(v, ratio)
 end
 
 local function lighten(v, ratio)
+  ratio = 1 - ratio
   local h, s, v = rgb_to_hsv(parse_rgb(v))
   v = 255 - ratio * (255 - v)
   local r, g, b = hsv_to_rgb(h, s, v)
@@ -93,7 +95,15 @@ function M.get_colors()
   local shades = {}
 
   for k, v in pairs(colors) do
-    shades[k] = { light = lighten(v, 0.8), normal = v, dark = darken(v, 0.8) }
+    shades[k] = {
+      light = lighten(v, 0.1),
+      lighter = lighten(v, 0.2),
+      lightest = lighten(v, 0.3),
+      normal = v,
+      dark = darken(v, 0.1),
+      darker = darken(v, 0.2),
+      darkest = darken(v, 0.3),
+    }
   end
 
   colors.shades = shades
