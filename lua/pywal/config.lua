@@ -28,7 +28,7 @@ M.highlights_base = function(colors)
     CursorLine = { guibg = colors.shades.background.light },
     CursorColumn = { guibg = colors.background },
     ColorColumn = { guibg = colors.background },
-    NormalFloat = { guibg = colors.shades.background.light },
+    NormalFloat = { guibg = colors.shades.background.lighter },
     Visual = { guibg = colors.color1, guifg = colors.foreground },
     VisualNOS = { guibg = colors.background },
     WarningMsg = { guifg = colors.color3, guibg = colors.background },
@@ -62,7 +62,7 @@ M.highlights_base = function(colors)
     Constant = { guifg = colors.color5 },
     Number = { guifg = colors.color5 },
     Boolean = { guifg = colors.color5 },
-    Float = { guifg = colors.color5 },
+    Float = { guifg = colors.color5, guibg = colors.shades.background.ligther },
     Identifier = { guifg = colors.color5 },
     Function = { guifg = colors.color6 },
     Operator = { guifg = colors.color6 },
@@ -228,7 +228,7 @@ M.highlights_base = function(colors)
     NvimTreeStatusLineNC = { guibg = colors.background, guifg = colors.background },
 
     -- LspSaga
-    LspFloatWinNormal = { guibg = colors.shades.background.light },
+    LspFloatWinNormal = { guibg = colors.shades.background.lighter },
     LspFloatWinBorder = { guifg = colors.background },
     LspSagaBorderTitle = { guifg = colors.color7 },
     LspSagaHoverBorder = { guifg = colors.color7 },
