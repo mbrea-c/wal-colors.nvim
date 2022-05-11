@@ -228,7 +228,7 @@ M.highlights_base = function(colors)
     NvimTreeStatusLineNC = { guibg = colors.background, guifg = colors.background },
 
     -- LspSaga
-    LspFloatWinNormal = { guibg = colors.background },
+    LspFloatWinNormal = { guibg = colors.shades.background.light },
     LspFloatWinBorder = { guifg = colors.background },
     LspSagaBorderTitle = { guifg = colors.color7 },
     LspSagaHoverBorder = { guifg = colors.color7 },
