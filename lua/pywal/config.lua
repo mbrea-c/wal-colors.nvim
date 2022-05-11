@@ -94,12 +94,12 @@ M.highlights_base = function(colors)
     TabLine = { guifg = colors.color2, guibg = colors.background },
     TabLineSel = { guifg = colors.foreground, guibg = colors.background },
     TabLineFill = { guifg = colors.foreground, guibg = colors.background },
-    CmpDocumentationBorder = { guifg = colors.foreground, guibg = colors.background },
-    CmpItemAbbr = { guifg = colors.foreground, guibg = colors.background },
-    CmpItemAbbrDeprecated = { guifg = colors.color2, guibg = colors.background },
-    CmpItemAbbrMatch = { guifg = colors.color7, guibg = colors.background },
-    CmpItemAbbrMatchFuzzy = { guifg = colors.color7, guibg = colors.background },
-    CmpItemKind = { guifg = colors.color4, guibg = colors.background },
+    CmpDocumentationBorder = { guifg = colors.foreground, colors.shades.background.lighter },
+    CmpItemAbbr = { guifg = colors.foreground, guibg = colors.shades.background.lighter },
+    CmpItemAbbrDeprecated = { guifg = colors.color2, guibg = colors.shades.background.lighter },
+    CmpItemAbbrMatch = { guifg = colors.color7, guibg = colors.shades.background.lighter },
+    CmpItemAbbrMatchFuzzy = { guifg = colors.color7, guibg = colors.shades.background.lighter },
+    CmpItemKind = { guifg = colors.color4, guibg = colors.shades.background.lighter },
     CmpItemMenu = { guifg = colors.color2, guibg = colors.shades.background.lighter },
 
     -- treesitter
