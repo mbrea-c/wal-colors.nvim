@@ -28,7 +28,7 @@ M.highlights_base = function(colors)
     CursorLine = { guibg = colors.shades.background.light },
     CursorColumn = { guibg = colors.background },
     ColorColumn = { guibg = colors.background },
-    NormalFloat = { guibg = colors.background },
+    NormalFloat = { guibg = colors.shades.background.light },
     Visual = { guibg = colors.color1, guifg = colors.foreground },
     VisualNOS = { guibg = colors.background },
     WarningMsg = { guifg = colors.color3, guibg = colors.background },
