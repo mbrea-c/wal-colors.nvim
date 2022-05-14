@@ -112,7 +112,6 @@ M.highlights_base = function(colors)
     CmpItemKindKeyword = { guifg = colors.foreground, guibg = "NONE" },
     CmpItemKindProperty = { guifg = colors.foreground, guibg = "NONE" },
     CmpItemKindUnit = { guifg = colors.foreground, guibg = "NONE" },
-    CmpItemMenu = { guibg = colors.background.lighter },
 
     -- treesitter
 
