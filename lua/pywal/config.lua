@@ -94,13 +94,24 @@ M.highlights_base = function(colors)
     TabLine = { guifg = colors.color2, guibg = colors.background },
     TabLineSel = { guifg = colors.foreground, guibg = colors.background },
     TabLineFill = { guifg = colors.foreground, guibg = colors.background },
-    CmpDocumentationBorder = { guifg = colors.foreground, guibg = colors.background },
-    CmpItemAbbr = { guifg = colors.foreground, guibg = colors.background },
-    CmpItemAbbrDeprecated = { guifg = colors.color2, guibg = colors.background },
-    CmpItemAbbrMatch = { guifg = colors.color7, guibg = colors.background },
-    CmpItemAbbrMatchFuzzy = { guifg = colors.color7, guibg = colors.background },
-    CmpItemKind = { guifg = colors.color4, guibg = colors.background },
-    CmpItemMenu = { guifg = colors.color2, guibg = colors.background },
+
+    -- nvim-cmp
+
+    CmpItemAbbrDeprecated = { gui = "strikethrough", guifg = colors.color8 },
+
+    CmpItemAbbrMatch = { guifg = colors.color4 },
+    CmpItemAbbrMatchFuzzy = { guifg = colors.color4 },
+
+    CmpItemKindVariable = { guifg = colors.color6 },
+    CmpItemKindInterface = { guifg = colors.color6 },
+    CmpItemKindText = { guifg = colors.color6 },
+
+    CmpItemKindFunction = { guifg = colors.color5 },
+    CmpItemKindMethod = { guifg = colors.color5 },
+
+    CmpItemKindKeyword = { guifg = colors.foreground },
+    CmpItemKindProperty = { guifg = colors.foreground },
+    CmpItemKindUnit = { guifg = colors.foreground },
 
     -- treesitter
 
