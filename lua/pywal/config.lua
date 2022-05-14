@@ -97,21 +97,21 @@ M.highlights_base = function(colors)
 
     -- nvim-cmp
 
-    CmpItemAbbrDeprecated = { gui = "strikethrough", guifg = colors.color8 },
+    CmpItemAbbrDeprecated = { gui = "strikethrough", guifg = colors.color8, guibg = "NONE" },
 
-    CmpItemAbbrMatch = { guifg = colors.color4 },
-    CmpItemAbbrMatchFuzzy = { guifg = colors.color4 },
+    CmpItemAbbrMatch = { guifg = colors.color, guibg = "NONE" },
+    CmpItemAbbrMatchFuzzy = { guifg = colors.color, guibg = "NONE" },
 
-    CmpItemKindVariable = { guifg = colors.color6 },
-    CmpItemKindInterface = { guifg = colors.color6 },
-    CmpItemKindText = { guifg = colors.color6 },
+    CmpItemKindVariable = { guifg = colors.color, guibg = "NONE" },
+    CmpItemKindInterface = { guifg = colors.color, guibg = "NONE" },
+    CmpItemKindText = { guifg = colors.color, guibg = "NONE" },
 
-    CmpItemKindFunction = { guifg = colors.color5 },
-    CmpItemKindMethod = { guifg = colors.color5 },
+    CmpItemKindFunction = { guifg = colors.color, guibg = "NONE" },
+    CmpItemKindMethod = { guifg = colors.color, guibg = "NONE" },
 
-    CmpItemKindKeyword = { guifg = colors.foreground },
-    CmpItemKindProperty = { guifg = colors.foreground },
-    CmpItemKindUnit = { guifg = colors.foreground },
+    CmpItemKindKeyword = { guifg = colors.foregroun, guibg = "NONE" },
+    CmpItemKindProperty = { guifg = colors.foregroun, guibg = "NONE" },
+    CmpItemKindUnit = { guifg = colors.foregroun, guibg = "NONE" },
 
     -- treesitter
 
