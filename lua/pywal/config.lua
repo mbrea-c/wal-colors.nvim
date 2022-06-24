@@ -239,6 +239,9 @@ M.highlights_base = function(colors)
     NvimTreeFolderIcon = { guifg = colors.color2, guibg = colors.background },
     NvimTreeStatusLineNC = { guibg = colors.background, guifg = colors.background },
 
+    -- Scrollbar
+    ScrollbarHandle = { guifg = colors.shades.background.lightest, guibg = colors.shades.background.lightest },
+
     -- LspSaga
     LspFloatWinNormal = { guibg = colors.shades.background.lighter },
     LspFloatWinBorder = { guifg = colors.background },
