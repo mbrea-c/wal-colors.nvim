@@ -3,8 +3,8 @@ local M = {}
 M.highlights_base = function(colors)
   local highlights = {}
 
-  local function set_hl(name, highlights)
-    highlights[name] = highlights
+  local function set_hl(name, hl)
+    highlights[name] = hl
   end
   local function get_hl(name)
     return highlights[name]
