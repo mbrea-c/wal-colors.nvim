@@ -151,7 +151,7 @@ M.highlights_base = function(colors)
   -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
   -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
   set_hl("TSKeyword", { fg = colors.color2, bold = true }) -- For keywords that don't fall in previous categories.
-  set_hl("TSKeywordFunction", { fg = colors.shades.color2.darker, bold = true }) -- For keywords used to define a fuction.
+  set_hl("TSKeywordFunction", { fg = colors.shades.color2.darker, bold = true, italic = true }) -- For keywords used to define a fuction.
   set_hl("TSLabel", { fg = colors.color7 }) -- For labels: `label:` in C and `:label:` in Lua.
   -- TSMethod            = { };    -- For method calls and definitions.
   -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
