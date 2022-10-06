@@ -6,9 +6,11 @@ M.highlights_base = function(colors)
   local function set_hl(name, hl)
     highlights[name] = hl
   end
+
   local function get_hl(name)
     return highlights[name]
   end
+
   set_hl("Normal", { fg = colors.foreground, bg = colors.background })
   set_hl("StatusLineNC", { bg = colors.background, fg = colors.background })
   set_hl("StatusLine", { bg = colors.background, fg = colors.background })
@@ -231,6 +233,10 @@ M.highlights_base = function(colors)
 
   -- Indent Blank Line
   set_hl("IndentBlanklineChar", { fg = colors.color1, bg = colors.background })
+  set_hl("IndentBlanklineIndent1", { bg = colors.shades.background.dark })
+  set_hl("IndentBlanklineIndent2", { bg = colors.background })
+  set_hl("IndentBlanklineContextChar", { bg = colors.shades.background.lighter })
+  set_hl("IndentBlanklineContextSpaceChar", get_hl("IndentBlanklineContextChar"))
 
   -- NvimTree
   set_hl("NvimTreeNormal", { fg = colors.foreground, bg = colors.background })
