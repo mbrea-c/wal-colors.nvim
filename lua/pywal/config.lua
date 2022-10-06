@@ -235,8 +235,9 @@ M.highlights_base = function(colors)
   set_hl("IndentBlanklineChar", { fg = colors.color1, bg = colors.background, nocombine = true })
   set_hl("IndentBlanklineIndent1", { bg = colors.shades.background.dark, nocombine = true })
   set_hl("IndentBlanklineIndent2", { bg = colors.background, nocombine = true })
-  set_hl("IndentBlanklineContextSpaceChar", { bg = colors.shades.background.lightest, nocombine = true })
-  set_hl("IndentBlanklineContextChar", { fg = colors.color1, bg = colors.shades.background.lightest, nocombine = true })
+  local context_line_hl = colors.shades.background.lighter
+  set_hl("IndentBlanklineContextSpaceChar", { fg = context_line_hl, bg = context_line_hl, nocombine = true })
+  set_hl("IndentBlanklineContextChar", { fg = context_line_hl, bg = context_line_hl, nocombine = true })
 
   -- NvimTree
   set_hl("NvimTreeNormal", { fg = colors.foreground, bg = colors.background })
