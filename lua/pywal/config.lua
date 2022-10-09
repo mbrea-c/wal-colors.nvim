@@ -232,10 +232,11 @@ M.highlights_base = function(colors)
   set_hl("TelescopeSelection", { fg = colors.background, bg = colors.color1 })
 
   -- Indent Blank Line
-  set_hl("IndentBlanklineChar", { fg = colors.shades.background.lighter, bg = colors.background })
+  set_hl("IndentBlanklineChar", { fg = colors.shades.background.lighter })
   set_hl("IndentBlanklineIndent1", { bg = colors.shades.background.dark })
   set_hl("IndentBlanklineIndent2", { bg = colors.background })
   set_hl("IndentBlanklineContextChar", { fg = colors.shades.color4.darkest })
+  set_hl("IndentBlanklineContextStart", { gui = "underdotted" })
 
   -- NvimTree
   set_hl("NvimTreeNormal", { fg = colors.foreground, bg = colors.background })
