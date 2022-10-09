@@ -236,7 +236,7 @@ M.highlights_base = function(colors)
   set_hl("IndentBlanklineIndent1", { bg = colors.shades.background.dark })
   set_hl("IndentBlanklineIndent2", { bg = colors.background })
   set_hl("IndentBlanklineContextChar", { fg = colors.shades.color4.darkest })
-  set_hl("IndentBlanklineContextStart", { gui = "underdotted" })
+  set_hl("IndentBlanklineContextStart", { underdotted = true })
 
   -- NvimTree
   set_hl("NvimTreeNormal", { fg = colors.foreground, bg = colors.background })
