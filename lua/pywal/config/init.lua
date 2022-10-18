@@ -41,7 +41,7 @@ M.highlights_base = function(colors)
   set_hl("CursorLine", { bg = colors.shades.background.light })
   set_hl("CursorColumn", { bg = colors.background })
   set_hl("ColorColumn", { bg = colors.background })
-  set_hl("NormalFloat", { bg = colors.background })
+  set_hl("NormalFloat", { bg = colors.shades.background.dark })
   set_hl("NormalInactive", { bg = colors.shades.background.lighter })
   set_hl("Visual", { bg = colors.color1, fg = colors.foreground })
   set_hl("VisualNOS", { bg = colors.background })
@@ -125,7 +125,6 @@ M.highlights_base = function(colors)
   set_hl("CmpItemKindKeyword", { fg = colors.foreground, bg = "NONE" })
   set_hl("CmpItemKindProperty", { fg = colors.foreground, bg = "NONE" })
   set_hl("CmpItemKindUnit", { fg = colors.foreground, bg = "NONE" })
-
 
   -- LspTrouble
   set_hl("LspTroubleText", { fg = colors.foreground })
