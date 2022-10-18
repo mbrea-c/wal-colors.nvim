@@ -57,15 +57,26 @@ M.setup = function(set_hl, get_hl, colors)
 
   -- @tag               = { };    -- Tags like html tag names.
   -- @tagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
-  -- @text              = { };    -- For strings considered text in a markup language.
-  set_hl("@text.reference", { fg = colors.color8 })
+
+  -- Text
+  -- [x] Complete
+  -- [ ] Assigned
+  set_hl("@text", { fg = colors.shades.foreground.dark }) -- For strings considered text in a markup language.
+  set_hl("@text.emphasis", { italic = true }) -- For text to be represented strong.
+  set_hl("@text.strong", { bold = true }) -- For text to be represented with emphasis.
+  set_hl("@text.underline", { underline = true }) -- For text to be represented with an underline.
+  set_hl("@text.strike", { strikethrough = true }) -- For strikethrough text.
+  set_hl("@text.title", { bold = true }) -- Text that is part of a title.
+  set_hl("@text.literal", nil) -- Literal text.
+  set_hl("@text.uri", { fg = colors.shades.color4.darkest, underline = true }) -- Any URI like a link or email.
   set_hl("@text.math", { fg = colors.color1 }) -- For latex math
-  -- @emphasis          = { };    -- For text to be represented with emphasis.
-  -- @underline         = { };    -- For text to be represented with an underline.
-  -- @strike            = { };    -- For strikethrough text.
-  -- @title             = { };    -- Text that is part of a title.
-  -- @literal           = { };    -- Literal text.
-  -- @uRI               = { };    -- Any URI like a link or email.
+  set_hl("@text.reference", { fg = colors.color8 })
+  set_hl("@text.environment", { fg = colors.color6 })
+  set_hl("@text.environment.name", { fg = colors.color6 })
+  set_hl("@text.environment.name", { fg = colors.color6 })
+  set_hl("@text.note", nil)
+  set_hl("@text.warning", nil)
+  set_hl("@text.danger", nil)
 end
 
 return M
