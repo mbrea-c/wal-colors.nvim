@@ -35,7 +35,7 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@keyword.function", { fg = colors.shades.color2.darker, bold = true, italic = true }) -- For keywords used to define a fuction.
   set_hl("@label", { fg = colors.color7 }) -- For labels: `label:` in C and `:label:` in Lua.
   -- @method            = { };    -- For method calls and definitions.
-  -- @namespace         = { };    -- For identifiers referring to modules and namespaces.
+  set_hl("@namespace", { fg = colors.color6, bold = true }) -- For identifiers referring to modules and namespaces.
   -- @none              = { };    -- TODO: docs
   set_hl("@number", { fg = colors.shades.color1.light }) -- For all numbers
   set_hl("@operator", { fg = colors.color3 }) -- For any operator: `+`, but also `->` and `*` in C.
@@ -45,7 +45,7 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@property", { fg = colors.color4 }) -- Same as `@field`.
   set_hl("@punctuation.delimiter", { fg = colors.shades.color3.darker }) -- For delimiters ie: `.`
   set_hl("@punctuation.bracket", { fg = colors.foreground }) -- For brackets and parens.
-  set_hl("@punctudation.special", { fg = colors.color7 }) -- For special punctutation that does not fall in the catagories before.
+  set_hl("@punctudation.special", { fg = colors.color3 }) -- For special punctutation that does not fall in the catagories before.
   set_hl("@repeat", { fg = colors.color2 }) -- For keywords related to loops.
   set_hl("@string", { fg = colors.color1 }) -- For strings.
   set_hl("@string.regex", { fg = colors.color7 }) -- For regexes.
