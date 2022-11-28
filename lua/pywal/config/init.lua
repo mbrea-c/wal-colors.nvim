@@ -136,13 +136,13 @@ M.highlights_base = function(colors)
   set_hl("illuminatedCurWord", { bg = colors.foreground })
 
   -- Rainbow brackets
-  set_hl("rainbowcol1", { bg = colors.shades.color1.darkest })
-  set_hl("rainbowcol2", { bg = colors.shades.color2.darkest })
-  set_hl("rainbowcol3", { bg = colors.shades.color3.darkest })
-  set_hl("rainbowcol4", { bg = colors.shades.color4.darkest })
-  set_hl("rainbowcol5", { bg = colors.shades.color5.darkest })
-  set_hl("rainbowcol6", { bg = colors.shades.color6.darkest })
-  set_hl("rainbowcol7", { bg = colors.shades.color1.darkest })
+  set_hl("rainbowcol1", { fg = colors.shades.color1.darkest })
+  set_hl("rainbowcol2", { fg = colors.shades.color2.darkest })
+  set_hl("rainbowcol3", { fg = colors.shades.color3.darkest })
+  set_hl("rainbowcol4", { fg = colors.shades.color4.darkest })
+  set_hl("rainbowcol5", { fg = colors.shades.color5.darkest })
+  set_hl("rainbowcol6", { fg = colors.shades.color6.darkest })
+  set_hl("rainbowcol7", { fg = colors.shades.color1.darkest })
 
   -- diff
   set_hl("diffAdded", { fg = colors.color4 })
