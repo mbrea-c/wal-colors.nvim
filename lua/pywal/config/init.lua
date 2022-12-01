@@ -142,7 +142,7 @@ M.highlights_base = function(colors)
   set_hl("rainbowcol4", { fg = colors.shades.color4.darkest })
   set_hl("rainbowcol5", { fg = colors.shades.color5.darkest })
   set_hl("rainbowcol6", { fg = colors.shades.color6.darkest })
-  set_hl("rainbowcol7", { fg = colors.shades.color1.darkest })
+  set_hl("rainbowcol7", { fg = colors.shades.color1.brighter })
 
   -- diff
   set_hl("diffAdded", { fg = colors.color4 })
