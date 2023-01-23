@@ -169,9 +169,9 @@ M.highlights_base = function(colors)
   set_hl("GitGutterDelete", { fg = colors.color11 }) -- diff mode: Deleted line |diff.txt|
 
   -- GitSigns
-  set_hl("GitSignsAdd", { fg = colors.color4 }) -- diff mode: Added line |diff.txt|
-  set_hl("GitSignsChange", { fg = colors.color5 }) -- diff mode: Changed line |diff.txt|
-  set_hl("GitSignsDelete", { fg = colors.color11 }) -- diff mode: Deleted line |diff.txt|
+  set_hl("GitSignsAdd", { fg = colors.color4, bg = colors.shades.background.dark }) -- diff mode: Added line |diff.txt|
+  set_hl("GitSignsChange", { fg = colors.color5, bg = colors.shades.background.dark }) -- diff mode: Changed line |diff.txt|
+  set_hl("GitSignsDelete", { fg = colors.color11, bg = colors.shades.background.dark }) -- diff mode: Deleted line |diff.txt|
 
   -- Telescope
   set_hl("TelescopeBorder", { fg = colors.color1, bg = colors.background })
