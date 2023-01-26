@@ -22,10 +22,13 @@ M.highlights_base = function(colors)
   set_hl("MsgArea", { fg = colors.foreground, bg = colors.background })
   set_hl("ModeMsg", { fg = colors.foreground, bg = colors.background })
   set_hl("MsgSeparator", { fg = colors.foreground, bg = colors.background })
+
+  -- Spelling
   set_hl("SpellBad", { fg = colors.color1, undercurl = true })
-  set_hl("SpellCap", { fg = colors.shades.color1.dark, undercurl = true })
+  set_hl("SpellCap", { fg = colors.color5, undercurl = true })
   set_hl("SpellLocal", { fg = colors.color3, undercurl = true })
   set_hl("SpellRare", { fg = colors.color6, undercurl = true })
+
   set_hl("NormalNC", { fg = colors.foreground, bg = colors.background })
   set_hl("Pmenu", { fg = colors.foreground, bg = colors.background })
   set_hl("PmenuSel", { fg = colors.background, bg = colors.color4 })
