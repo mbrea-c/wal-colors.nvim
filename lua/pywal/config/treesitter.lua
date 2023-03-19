@@ -52,7 +52,7 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@string.escape", { fg = colors.color6 })                                              -- For escape characters within a string.
   -- @symbol            = { };    -- For identifiers referring to symbols or atoms.
   set_hl("@type", { fg = colors.color2 })
-  set_hl("@type.qualifier", { fg = colors.shades.color2.light })
+  set_hl("@type.qualifier", { fg = colors.shades.color2.light, italic = true })
   set_hl("@type.builtin", { fg = colors.shades.color2.dark })
   set_hl("@variable.builtin", { fg = colors.color11 }) -- Variable names that are defined by the languages, like `this` or `self`.
 
