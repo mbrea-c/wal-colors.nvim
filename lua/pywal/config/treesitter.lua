@@ -22,6 +22,7 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@danger", { fg = colors.background, bg = colors.color3 })
   set_hl("@constructor", { fg = colors.color6 }) -- For constructor calls and definitions: `= { }` in Lua, and Java constructors)
   set_hl("@conditional", { fg = colors.color2 }) -- For keywords related to conditionnals)
+  set_hl("@constant", { fg = colors.color6.darker, bold = true })
   -- @constant          = { };    -- For constants
   -- @constBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
   -- @constMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
