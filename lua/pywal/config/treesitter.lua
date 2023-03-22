@@ -10,12 +10,14 @@ M.setup = function(set_hl, get_hl, colors)
   -- you explicitly want to support Treesitter's improved syntax awareness.
 
   -- @annotation        = { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-  -- @attribute         = { };    -- (unstable) TODO: docs
+  -- @attribute         = { };    -- (unstable)  TODO: docs
   -- @boolean           = { };    -- For booleans.
   -- @character         = { };    -- For characters.
-  -- @comment           = { };    -- For color1 blocks.
   set_hl("@note", { fg = colors.background, bg = colors.color5 })
+
   set_hl("@comment", { fg = colors.color8 })
+  set_hl("@comment.documentation", { fg = colors.shades.color8.lighter, italic = true }) -- e.g. javadoc
+
   set_hl("@warning", { fg = colors.background, bg = colors.color5 })
   set_hl("@danger", { fg = colors.background, bg = colors.color3 })
   set_hl("@constructor", { fg = colors.color6 }) -- For constructor calls and definitions: `= { }` in Lua, and Java constructors)
