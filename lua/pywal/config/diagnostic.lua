@@ -14,6 +14,10 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("DiagnosticUnderlineWarn", { italic = true, underdotted = true, sp = warning })
   set_hl("DiagnosticUnderlineInfo", { italic = true, underdotted = true, sp = info })
   set_hl("DiagnosticUnderlineHint", { italic = true, underdotted = true, sp = hint })
+  set_hl("DiagnosticSignError", { fg = error })
+  set_hl("DiagnosticSignWarn", { fg = warning })
+  set_hl("DiagnosticSignInfo", { fg = info })
+  set_hl("DiagnosticSignHint", { fg = hint })
   --DiagnosticVirtualTextError
   --DiagnosticVirtualTextWarn
   --DiagnosticVirtualTextInfo
@@ -22,10 +26,6 @@ M.setup = function(set_hl, get_hl, colors)
   --DiagnosticFloatingWarn
   --DiagnosticFloatingInfo
   --DiagnosticFloatingHint
-  --DiagnosticSignError
-  --DiagnosticSignWarn
-  --DiagnosticSignInfo
-  --DiagnosticSignHint
 end
 
 return M
