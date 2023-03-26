@@ -4,6 +4,7 @@ M.highlights_base = function(colors)
   local treesitter = require("pywal.config.treesitter")
   local cornelis = require("pywal.config.cornelis")
   local treesitter_context = require("pywal.config.treesitter-context")
+  local diagnostics = require("pywal.config.diagnostic")
 
   local highlights = {}
 
@@ -18,6 +19,7 @@ M.highlights_base = function(colors)
   treesitter.setup(set_hl, get_hl, colors)
   cornelis.setup(set_hl, get_hl, colors)
   treesitter_context.setup(set_hl, get_hl, colors)
+  diagnostics.setup(set_hl, get_hl, colors)
 
   set_hl("Normal", { fg = colors.foreground, bg = colors.background })
   set_hl("StatusLineNC", { bg = colors.background, fg = colors.background })
@@ -171,13 +173,13 @@ M.highlights_base = function(colors)
   set_hl("NeogitDiffAddHighlight", { fg = colors.color4, bg = colors.color4 })
 
   -- GitGutter
-  set_hl("GitGutterAdd", { fg = colors.color4 }) -- diff mode: Added line |diff.txt|
-  set_hl("GitGutterChange", { fg = colors.color5 }) -- diff mode: Changed line |diff.txt|
+  set_hl("GitGutterAdd", { fg = colors.color4 })     -- diff mode: Added line |diff.txt|
+  set_hl("GitGutterChange", { fg = colors.color5 })  -- diff mode: Changed line |diff.txt|
   set_hl("GitGutterDelete", { fg = colors.color11 }) -- diff mode: Deleted line |diff.txt|
 
   -- GitSigns
-  set_hl("GitSignsAdd", { fg = colors.color4, bg = colors.shades.background.dark }) -- diff mode: Added line |diff.txt|
-  set_hl("GitSignsChange", { fg = colors.color5, bg = colors.shades.background.dark }) -- diff mode: Changed line |diff.txt|
+  set_hl("GitSignsAdd", { fg = colors.color4, bg = colors.shades.background.dark })     -- diff mode: Added line |diff.txt|
+  set_hl("GitSignsChange", { fg = colors.color5, bg = colors.shades.background.dark })  -- diff mode: Changed line |diff.txt|
   set_hl("GitSignsDelete", { fg = colors.color11, bg = colors.shades.background.dark }) -- diff mode: Deleted line |diff.txt|
 
   -- Telescope
