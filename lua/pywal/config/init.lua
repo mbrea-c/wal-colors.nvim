@@ -1,10 +1,13 @@
 local M = {}
 
 M.highlights_base = function(colors)
-  local treesitter = require("pywal.config.treesitter")
-  local cornelis = require("pywal.config.cornelis")
-  local treesitter_context = require("pywal.config.treesitter-context")
-  local diagnostics = require("pywal.config.diagnostic")
+  local configs = {
+    require("pywal.config.treesitter"),
+    require("pywal.config.cornelis"),
+    require("pywal.config.treesitter-context"),
+    require("pywal.config.diagnostic"),
+    require("pywal.config.cmp"),
+  }
 
   local highlights = {}
 
@@ -16,10 +19,9 @@ M.highlights_base = function(colors)
     return highlights[name]
   end
 
-  treesitter.setup(set_hl, get_hl, colors)
-  cornelis.setup(set_hl, get_hl, colors)
-  treesitter_context.setup(set_hl, get_hl, colors)
-  diagnostics.setup(set_hl, get_hl, colors)
+  for _, config in ipairs(configs) do
+    config.setup(set_hl, get_hl, colors)
+  end
 
   set_hl("Normal", { fg = colors.foreground, bg = colors.background })
   set_hl("StatusLineNC", { bg = colors.background, fg = colors.background })
