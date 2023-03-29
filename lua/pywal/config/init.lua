@@ -119,24 +119,6 @@ M.highlights_base = function(colors)
   set_hl("TabLineSel", { fg = colors.foreground, bg = colors.background })
   set_hl("TabLineFill", { fg = colors.foreground, bg = colors.background })
 
-  -- nvim-cmp
-
-  set_hl("CmpItemAbbrDeprecated", { strikethrough = true, fg = colors.color8, bg = "NONE" })
-
-  set_hl("CmpItemAbbrMatch", { fg = colors.color4, bg = "NONE" })
-  set_hl("CmpItemAbbrMatchFuzzy", { fg = colors.color4, bg = "NONE" })
-
-  set_hl("CmpItemKindVariable", { fg = colors.color6, bg = "NONE" })
-  set_hl("CmpItemKindInterface", { fg = colors.color6, bg = "NONE" })
-  set_hl("CmpItemKindText", { fg = colors.color6, bg = "NONE" })
-
-  set_hl("CmpItemKindFunction", { fg = colors.color5, bg = "NONE" })
-  set_hl("CmpItemKindMethod", { fg = colors.color5, bg = "NONE" })
-
-  set_hl("CmpItemKindKeyword", { fg = colors.foreground, bg = "NONE" })
-  set_hl("CmpItemKindProperty", { fg = colors.foreground, bg = "NONE" })
-  set_hl("CmpItemKindUnit", { fg = colors.foreground, bg = "NONE" })
-
   -- LspTrouble
   set_hl("LspTroubleText", { fg = colors.foreground })
   set_hl("LspTroubleCount", { fg = colors.color6, bg = colors.foreground })
