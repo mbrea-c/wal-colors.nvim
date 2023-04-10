@@ -7,6 +7,7 @@ M.highlights_base = function(colors)
     require("pywal.config.treesitter-context"),
     require("pywal.config.diagnostic"),
     require("pywal.config.cmp"),
+    require("pywal.config.lsp-semantic-highlight"),
   }
 
   local highlights = {}
