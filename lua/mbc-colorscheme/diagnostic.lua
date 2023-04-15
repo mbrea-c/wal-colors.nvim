@@ -1,15 +1,15 @@
 local M = {}
 
 M.setup = function(set_hl, get_hl, colors)
-  local error = colors.color1:lightened(0.3):out()
-  local warning = colors.color3:lightened(0.3):out()
-  local info = colors.foreground:lightened(0.3):out()
-  local hint = colors.color4:lightened(0.3):out()
+  local error = colors.red:lightened(0.3)
+  local warning = colors.yellow:lightened(0.3)
+  local info = colors.foreground:lightened(0.3)
+  local hint = colors.blue:lightened(0.3)
 
-  set_hl("DiagnosticError", { underdotted = true, bg = colors.background:darkened(0.1):out(), fg = error })
-  set_hl("DiagnosticWarn", { underdotted = true, bg = colors.background:darkened(0.1):out(), fg = warning })
-  set_hl("DiagnosticInfo", { underdotted = true, bg = colors.background:darkened(0.1):out(), fg = info })
-  set_hl("DiagnosticHint", { underdotted = true, bg = colors.background:darkened(0.1):out(), fg = hint })
+  set_hl("DiagnosticError", { underdotted = true, bg = colors.background:darkened(0.1), fg = error })
+  set_hl("DiagnosticWarn", { underdotted = true, bg = colors.background:darkened(0.1), fg = warning })
+  set_hl("DiagnosticInfo", { underdotted = true, bg = colors.background:darkened(0.1), fg = info })
+  set_hl("DiagnosticHint", { underdotted = true, bg = colors.background:darkened(0.1), fg = hint })
   set_hl("DiagnosticUnderlineError", { italic = true, underdotted = true, sp = error })
   set_hl("DiagnosticUnderlineWarn", { italic = true, underdotted = true, sp = warning })
   set_hl("DiagnosticUnderlineInfo", { italic = true, underdotted = true, sp = info })

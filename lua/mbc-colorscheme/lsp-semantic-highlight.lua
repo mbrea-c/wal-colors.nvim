@@ -29,7 +29,7 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@lsp.type.decorator", { link = "@type.function" })
   -- Modifiers
   set_hl("@lsp.mod.deprecated", { strikethrough = true })
-  set_hl("@lsp.mod.global", { fg = colors.red:mixed_rgb(colors.yellow, 0.6):out() })
+  set_hl("@lsp.mod.global", { fg = colors.red:mixed_rgb(colors.yellow, 0.6) })
   -- Type/modifier combinations
   set_hl("@lsp.typemod.function.defaultLibrary", { link = "@function.builtin" })
 end
