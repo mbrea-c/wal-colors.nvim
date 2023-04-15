@@ -1,6 +1,7 @@
 local M = {}
 
 M.setup = function(set_hl, get_hl, colors)
+  -- Types
   set_hl("@lsp.type.namespace", { link = "@namespace" })
   set_hl("@lsp.type.comment", { link = "@comment" })
   set_hl("@lsp.type.type", { link = "@type" })
@@ -8,7 +9,7 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@lsp.type.class", { link = "@type" })
   set_hl("@lsp.type.enum", { link = "@type" })
   set_hl("@lsp.type.interface", { link = "@type" })
-  set_hl("@lsp.type.struct", { link = "@type" })
+  set_hl("@lsp.type.struct", { link = "@structure" })
   set_hl("@lsp.type.typeParameter", { link = "@parameter" })
   set_hl("@lsp.type.parameter", { link = "@parameter" })
   set_hl("@lsp.type.variable", { link = "@variable" })
@@ -25,7 +26,12 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@lsp.type.number", { link = "@number" })
   set_hl("@lsp.type.regexp", { link = "@string.regex" })
   set_hl("@lsp.type.operator", { link = "@operator" })
-  set_hl("@lsp.type.decorator", { link = "@type.qualifier" })
+  set_hl("@lsp.type.decorator", { link = "@type.function" })
+  -- Modifiers
+  set_hl("@lsp.mod.deprecated", { strikethrough = true })
+  set_hl("@lsp.mod.global", { fg = colors.red:mixed_rgb(colors.yellow, 0.6):out() })
+  -- Type/modifier combinations
+  set_hl("@lsp.typemod.function.defaultLibrary", { link = "@function.builtin" })
 end
 
 return M
