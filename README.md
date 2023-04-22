@@ -10,16 +10,21 @@ not supported!)
 Screenshots taken with different pywal themes.
 
 ### Catpuccin (frappe)
+
 ![init.lua](.screenshots/colorlua.jpg)
 
 ### Apprentice
+
 ![init.lua](.screenshots/apprentice.jpg)
 
 ### Rose Pine
+
 ![init.lua](.screenshots/rose_pine.jpg)
 
-
 ## Installation
+
+The only important point is that `wal-colors.nvim` is installed **before** this
+plugin. See below for how to do this in `lazy.nvim`.
 
 ### lazy.nvim
 
