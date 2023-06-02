@@ -182,7 +182,7 @@ end
 
 function Color:out()
   local r, g, b = hsv_to_rgb(self.hue, self.saturation, self.value)
-  local rgb_hexstring = string.format("#%2X%2X%2X", r, g, b)
+  local rgb_hexstring = string.format("#%02X%02X%02X", r, g, b)
   return rgb_hexstring
 end
 
