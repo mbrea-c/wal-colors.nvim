@@ -1,4 +1,4 @@
-# mbc-colorscheme
+# mbc-wal
 
 A colorscheme that makes use of your pywal colors via the [wal-colors](wal-colors.md) lua API.
 Supports treesitter highlights, LSP semantic highlight tokens, rainbow brackets
@@ -21,16 +21,13 @@ not supported!)
 
 ## Installation
 
-The only important point is that `wal-colors.nvim` is installed **before** this
-plugin. See below for how to do this in `lazy.nvim`.
-
 ### lazy.nvim
 
-Add a `mbc-colorscheme.lua` file to your plugin spec directory containing the
+Add a `mbc-wal.lua` file to your plugin spec directory containing the
 following:
 
 ```lua
 return {
-  "mbrea-c/mbc-colorscheme.nvim"
+  "sonjiku/mbc-wall.nvim"
 }
 ```
