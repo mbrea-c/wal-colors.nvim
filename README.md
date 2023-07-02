@@ -1,16 +1,11 @@
 # wal-colors.nvim
 
-Lua API for accessing variants of cached pywal-generated colors. Targeted for
-those who want to create a colorscheme which automatically matches their current userwide wal colorscheme,
-but see the 16-color only cterm color configuration as too limiting.
+A colorscheme and lualine theme based on pywal-generated colors, but using
+more shaded and interpolated variants of the generated colors to have more than
+16 colors on screen.
 
-Colorschemes using this API:
-
-- [mbc-colorscheme.nvim](https://github.com/mbrea-c/mbc-colorscheme.nvim)
-
-Lualine themes:
-
-- [mbc-lualine.nvim](https://github.com/mbrea-c/mbc-lualine.nvim)
+The project includes a Lua API for accessing variants of cached pywal-generated colors for those that
+would like to use them in their own projects or colorschemes.
 
 ## Installation
 
@@ -22,11 +17,16 @@ Create a `wal-colors.lua` in your plugin directory of choice, with contents:
 
 ```lua
 return {
-  "mbrea-c/wal-colors.nvim"
+  "mbrea-c/wal-colors.nvim",
+  config = function()
+    vim.cmd([[colorscheme mbc]]) -- activate the colorscheme
+  end,
+  priority = 1000, -- recommended to ensure the colorscheme
+                   -- is loaded before other plugins
 }
 ```
 
-## Quickstart
+## API Quickstart
 
 ```lua
 local ColorSpec = require("wal-colors.core").ColorSpec
