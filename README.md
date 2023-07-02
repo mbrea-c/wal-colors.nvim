@@ -7,6 +7,22 @@ more shaded and interpolated variants of the generated colors to have more than
 The project includes a Lua API for accessing variants of cached pywal-generated colors for those that
 would like to use them in their own projects or colorschemes.
 
+## Screenshots
+
+Screenshots taken with different pywal themes.
+
+### Catpuccin (frappe)
+
+![init.lua](.screenshots/colorlua.jpg)
+
+### Apprentice
+
+![init.lua](.screenshots/apprentice.jpg)
+
+### Rose Pine
+
+![init.lua](.screenshots/rose_pine.jpg)
+
 ## Installation
 
 Simply install with your plugin manager of choice.
