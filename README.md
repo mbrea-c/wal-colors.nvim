@@ -13,6 +13,7 @@ Screenshots taken with different pywal themes.
 
 ### Catpuccin (frappe)
 
+![cmp.lua](.screenshots/cmp.jpg)
 ![init.lua](.screenshots/colorlua.jpg)
 
 ### Apprentice
@@ -40,6 +41,36 @@ return {
   priority = 1000, -- recommended to ensure the colorscheme
                    -- is loaded before other plugins
 }
+```
+
+### nvim-cmp configuration
+
+In order to configure cmp to look as in the screenshots, install the
+[lspkind](https://github.com/onsails/lspkind.nvim) and add the following
+code to your cmp configuration table:
+
+```lua
+cmp.setup({
+  -- ... (other stuff) ...
+  window = {
+    completion = {
+      col_offset = -3,
+      side_padding = 0,
+    },
+  },
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, vim_item)
+      local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
+      local strings = vim.split(kind.kind, "%s", { trimempty = true })
+      kind.kind = " " .. (strings[1] or "") .. " "
+      kind.menu = "    (" .. (strings[2] or "") .. ")"
+
+      return kind
+    end,
+  },
+  -- ... (other stuff) ...
+})
 ```
 
 ## API Quickstart

@@ -33,7 +33,7 @@ M.setup = function(set_hl, get_hl, colors)
 
   -- Primitives
   set_hl("CornelisPragma", { link = "@macro" })
-  set_hl("CornelisPostulate", { link = "@keyword" })
+  set_hl("CornelisPostulate", { link = "@type.abstract" })
   set_hl("CornelisPrimitive", { link = "@constant.builtin" })
   set_hl("CornelisPrimitiveType", { link = "@type.builtin" })
 
