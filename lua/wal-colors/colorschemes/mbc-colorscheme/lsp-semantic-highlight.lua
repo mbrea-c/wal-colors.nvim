@@ -5,7 +5,9 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@lsp.type.namespace", { link = "@namespace" })
   set_hl("@lsp.type.comment", { link = "@comment" })
   set_hl("@lsp.type.type", { link = "@type" })
+
   --TODO: Add different highlights for each type of type
+
   set_hl("@lsp.type.class", { link = "@type" })
   set_hl("@lsp.type.enum", { link = "@type" })
   set_hl("@lsp.type.interface", { link = "@type" })
@@ -29,6 +31,8 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@lsp.type.decorator", { link = "@type.function" })
   -- Modifiers
   set_hl("@lsp.mod.deprecated", { strikethrough = true })
+  set_hl("@lsp.mod.declaration", { underdashed = true })
+  set_hl("@lsp.mod.readonly", { italic = true })
   set_hl("@lsp.mod.global", { fg = colors.red:mixed_rgb(colors.yellow, 0.4) })
   -- Type/modifier combinations
   set_hl("@lsp.typemod.function.defaultLibrary", { link = "@function.builtin" })
