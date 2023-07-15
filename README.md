@@ -46,7 +46,7 @@ return {
 ## Tweaking colorscheme in configuration
 
 In case some highlights look bad or don't look as intended with your configuration,
-it is also possible to tweak an existing colorscheme in your configuration after applying it.
+it is also possible to tweak an existing colorscheme in after applying it.
 Simply use the following pattern **after** applying your desired colorscheme:
 
 ```lua
