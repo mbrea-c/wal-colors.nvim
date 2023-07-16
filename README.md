@@ -43,28 +43,6 @@ return {
 }
 ```
 
-## Tweaking colorscheme in configuration
-
-In case some highlights look bad or don't look as intended with your configuration,
-it is also possible to tweak an existing colorscheme in after applying it.
-Simply use the following pattern **after** applying your desired colorscheme:
-
-```lua
--- ...
-local tweaks = function(colors)
-  return {
-    LspReferenceText = { fg = colors.background, bg = colors.foreground },
-    LspReferenceRead = { fg = colors.background, bg = colors.foreground },
-  }
-end
-
--- `replace = false` indicates indicates that we want to update
--- the configuration for any given highlight group rather than completely
--- replacing it (which would be the default behavior for `nvim_set_hl`)
-require("wal-colors").setup(tweaks, { replace = false })
--- ...
-```
-
 ### nvim-cmp configuration
 
 In order to configure cmp to look as in the screenshots, install the
@@ -93,6 +71,28 @@ cmp.setup({
   },
   -- ... (other stuff) ...
 })
+```
+
+## Tweaking colorscheme in configuration
+
+In case some highlights look bad or don't look as intended with your configuration,
+it is also possible to tweak an existing colorscheme in after applying it.
+Simply use the following pattern **after** applying your desired colorscheme:
+
+```lua
+-- ...
+local tweaks = function(colors)
+  return {
+    LspReferenceText = { fg = colors.background, bg = colors.foreground },
+    LspReferenceRead = { fg = colors.background, bg = colors.foreground },
+  }
+end
+
+-- `replace = false` indicates indicates that we want to update
+-- the configuration for any given highlight group rather than completely
+-- replacing it (which would be the default behavior for `nvim_set_hl`)
+require("wal-colors").setup(tweaks, { replace = false })
+-- ...
 ```
 
 ## API Quickstart
