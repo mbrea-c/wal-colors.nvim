@@ -32,9 +32,9 @@ M.highlights_base = function(colors)
   set_hl("ModeMsg", { fg = colors.foreground, bg = colors.background })
   set_hl("MsgSeparator", { fg = colors.foreground, bg = colors.background })
 
-  set_hl("LspReferenceText", { bg = colors.background:lightened(0.2) })
-  set_hl("LspReferenceRead", { bg = colors.background:lightened(0.2), italic = true })
-  set_hl("LspReferenceWrite", { bg = colors.background:lightened(0.2), bold = true })
+  set_hl("LspReferenceText", { bg = colors.background:highlighted(0.2) })
+  set_hl("LspReferenceRead", { bg = colors.background:highlighted(0.2), italic = true })
+  set_hl("LspReferenceWrite", { bg = colors.background:highlighted(0.2), bold = true })
 
   -- Spelling
   set_hl("SpellBad", { fg = colors.color1, undercurl = true })

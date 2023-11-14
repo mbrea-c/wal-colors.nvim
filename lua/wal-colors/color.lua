@@ -55,7 +55,12 @@ end
 --- @field hue number
 --- @field saturation number
 --- @field value number
+--- @field is_dark_colorscheme boolean
 local Color = {}
+
+function Color:set_is_dark_colorscheme(is_dark_colorscheme)
+  self.is_dark_colorscheme = is_dark_colorscheme
+end
 
 function Color:set_value(value)
   -- value is a number between 0 and 1
@@ -137,6 +142,14 @@ function Color:saturated(ratio)
   local s = 1 - ratio * (1 - self.saturation)
   new_color:set_saturation(s)
   return new_color
+end
+
+function Color:highlighted(ratio)
+  if self.is_dark_colorscheme then
+    return self:lightened(ratio)
+  else
+    return self:darkened(ratio)
+  end
 end
 
 --- Returns a color that is a mix of two colors. The ratio parameter is optional
