@@ -8,6 +8,7 @@ M.highlights_base = function(colors)
     require("wal-colors.colorschemes.mbc-colorscheme.diagnostic"),
     require("wal-colors.colorschemes.mbc-colorscheme.cmp"),
     require("wal-colors.colorschemes.mbc-colorscheme.lsp-semantic-highlight"),
+    require("wal-colors.colorschemes.mbc-colorscheme.diffmode"),
   }
 
   local highlights = {}
@@ -62,9 +63,6 @@ M.highlights_base = function(colors)
   set_hl("Visual", { bg = colors.color1, fg = colors.foreground })
   set_hl("VisualNOS", { bg = colors.background })
   set_hl("WarningMsg", { fg = colors.color3, bg = colors.background })
-  set_hl("DiffAdd", { fg = colors.background, bg = colors.color4 })
-  set_hl("DiffChange", { fg = colors.background, bg = colors.color5 })
-  set_hl("DiffDelete", { fg = colors.background, bg = colors.color11 })
   set_hl("QuickFixLine", { bg = colors.color2 })
   set_hl("PmenuSbar", { bg = colors.background })
   set_hl("PmenuThumb", { bg = colors.color2 })
