@@ -36,6 +36,7 @@ M.setup = function(set_hl, get_hl, colors)
   set_hl("@lsp.mod.global", { fg = colors.red:mixed_rgb(colors.yellow, 0.4) })
   -- Type/modifier combinations
   set_hl("@lsp.typemod.function.defaultLibrary", { link = "@function.builtin" })
+  set_hl("@lsp.typemod.comment.documentation", { link = "@comment.documentation" })
 
   -- Clangd specific
   set_hl("@lsp.mod.globalScope", { link = "@lsp.mod.global" })
