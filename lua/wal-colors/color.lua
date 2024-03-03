@@ -9,46 +9,56 @@ local function parse_rgb(s)
 end
 
 local function rgb_to_hsv(r, g, b)
-  local K = 0
-  if g < b then
-    g, b = b, g
-    K = -1
-  end
-  if r < g then
-    r, g = g, r
-    K = -2 / 6 - K
-  end
-  local chroma = r - math.min(g, b)
-  local h = math.abs(K + (g - b) / (6 * chroma + 1e-20))
-  local s = chroma / (r + 1e-20)
-  local v = r
-  return h * 360, s, v / 255
+    r, g, b = r / 255, g / 255, b / 255
+    local max = math.max(r, g, b)
+    local min = math.min(r, g, b)
+    local h, s, v
+    local d = max - min
+    v = max
+    if max ~= 0 then
+        s = d / max
+    else
+        return 0, 0, v
+    end
+    if max == min then
+        h = 0
+    elseif max == r then
+        h = (g - b) / d + (g < b and 6 or 0)
+    elseif max == g then
+        h = (b - r) / d + 2
+    else
+        h = (r - g) / d + 4
+    end
+    h = h / 6
+    return h, s, v
 end
 
 local function hsv_to_rgb(h, s, v)
-  v = 255 * v
-  if s == 0 then --gray
-    return v, v, v
-  end
-  local H = h / 60
-  local i = math.floor(H) --which 1/6 part of hue circle
-  local f = H - i
-  local p = v * (1 - s)
-  local q = v * (1 - s * f)
-  local t = v * (1 - s * (1 - f))
-  if i == 0 then
-    return v, t, p
-  elseif i == 1 then
-    return q, v, p
-  elseif i == 2 then
-    return p, v, t
-  elseif i == 3 then
-    return p, q, v
-  elseif i == 4 then
-    return t, p, v
-  else
-    return v, p, q
-  end
+    local r, g, b
+    local i = math.floor(h * 6)
+    local f = h * 6 - i
+    local p = v * (1 - s)
+    local q = v * (1 - f * s)
+    local t = v * (1 - (1 - f) * s)
+
+    i = i % 6
+
+    if i == 0 then
+        r, g, b = v, t, p
+    elseif i == 1 then
+        r, g, b = q, v, p
+    elseif i == 2 then
+        r, g, b = p, v, t
+    elseif i == 3 then
+        r, g, b = p, q, v
+    elseif i == 4 then
+        r, g, b = t, p, v
+    else
+        r, g, b = v, p, q
+    end
+
+    return math.floor(r * 255 + 0.5), math.floor(g * 255 + 0.5),
+           math.floor(b * 255 + 0.5)
 end
 
 --- @class Color
